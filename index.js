@@ -21,15 +21,14 @@ mongoose
   .then(console.log("connected  to db"))
   .catch((err) => console.log(err));
 
+app.use(express.static(path.join(__dirname, "/frontend")));
 app.get("/* ", (req, res) => {
-  res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+  res.sendFile(path.join(__dirname, "/frontend", "index.html"));
 });
 
 app.use("/api/auth", authRoute);
 app.use("/api/user", userRoute);
 app.use("/api/article", articleRoute);
-
-app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`server is running on port ${process.env.PORT || 5000}`);

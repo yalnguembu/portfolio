@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb39a5b4.css",
+    "main.js": "/static/js/main.e65e313b.js",
+    "static/js/787.102e6764.chunk.js": "/static/js/787.102e6764.chunk.js",
+    "static/media/moi u.png": "/static/media/moi u.6d1f3b10f0d02685079b.png",
+    "static/media/image 2-100.jpg": "/static/media/image 2-100.f8761e968c8669222cf7.jpg",
+    "static/media/contact.png": "/static/media/contact.89064d97a92eb47a9b46.png",
+    "static/media/PHP.png": "/static/media/PHP.00baeb442607d6f50cfe.png",
+    "static/media/Java.png": "/static/media/Java.1e433051f18ee6748a82.png",
+    "static/media/1616319502695_.jpg": "/static/media/1616319502695_.52cfbaaeb3bfaa4fd78e.jpg",
+    "static/media/logo horizontal.png": "/static/media/logo horizontal.492065f8fff69b2b6452.png",
+    "static/media/Node JS.png": "/static/media/Node JS.abfaef34ea49d0c7cd3c.png",
+    "static/media/CSS.png": "/static/media/CSS.4e67641bb68b658d9b2b.png",
+    "static/media/Adobe_XD.png": "/static/media/Adobe_XD.b00f260451c8cc30f0de.png",
+    "static/media/Angular.png": "/static/media/Angular.8cbd3d8b9701ad8e21e7.png",
+    "static/media/html.png": "/static/media/html.23784160d848f734c302.png",
+    "static/media/JavaScript.png": "/static/media/JavaScript.bb54340fef3a4c9fbb89.png",
+    "static/media/favicon.png": "/static/media/favicon.b1c4e8c3abbf5b0ea6ba.png",
+    "static/media/Photoshop.png": "/static/media/Photoshop.7053c5c9e6b4c8fcb4d2.png",
+    "static/media/React Native.png": "/static/media/React Native.c59a2e84840223bb95c6.png",
+    "static/media/Lightroom.png": "/static/media/Lightroom.d375d5b242fab63d3f05.png",
+    "index.html": "/index.html",
+    "main.eb39a5b4.css.map": "/static/css/main.eb39a5b4.css.map",
+    "main.e65e313b.js.map": "/static/js/main.e65e313b.js.map",
+    "787.102e6764.chunk.js.map": "/static/js/787.102e6764.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb39a5b4.css",
+    "static/js/main.e65e313b.js"
+  ]
+}
