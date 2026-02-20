@@ -1,0 +1,297 @@
+/* Animations & Keyframes */
+
+/* ===== REVEAL ANIMATIONS ===== */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: reveal 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+.reveal.visible {
+  opacity: 1;
+  animation: reveal 0.6s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.reveal:nth-child(1) { animation-delay: 0ms; }
+.reveal:nth-child(2) { animation-delay: 100ms; }
+.reveal:nth-child(3) { animation-delay: 200ms; }
+.reveal:nth-child(4) { animation-delay: 300ms; }
+.reveal:nth-child(5) { animation-delay: 400ms; }
+.reveal:nth-child(6) { animation-delay: 500ms; }
+.reveal:nth-child(7) { animation-delay: 600ms; }
+.reveal:nth-child(8) { animation-delay: 700ms; }
+.reveal:nth-child(9) { animation-delay: 800ms; }
+.reveal:nth-child(10) { animation-delay: 900ms; }
+
+/* ===== FADE IN ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* ===== SCALE UP ===== */
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scale-up {
+  animation: scaleUp 0.4s ease-out;
+}
+
+/* ===== SLIDE IN ===== */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+/* ===== PULSE ===== */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ===== SPIN ===== */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+/* ===== BOUNCE ===== */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s ease-in-out infinite;
+}
+
+/* ===== SVG ICON ANIMATIONS ===== */
+@keyframes iconDraw {
+  from {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+  }
+  to {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 0;
+  }
+}
+
+.icon-draw {
+  animation: iconDraw 0.8s ease-out;
+}
+
+@keyframes iconPulse {
+  0%, 100% {
+    r: 40px;
+    opacity: 1;
+  }
+  100% {
+    r: 60px;
+    opacity: 0;
+  }
+}
+
+.icon-pulse {
+  animation: iconPulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.icon-float {
+  animation: iconFloat 3s ease-in-out infinite;
+}
+
+/* ===== THEME TOGGLE ANIMATION ===== */
+@keyframes themeSwap {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.8) rotate(180deg);
+    opacity: 0;
+  }
+  51% {
+    transform: scale(0.8) rotate(180deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.theme-icon {
+  display: inline-flex;
+  animation: themeSwap 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== TEXT ANIMATIONS ===== */
+@keyframes textGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(251, 191, 36, 0);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+  }
+}
+
+.text-glow {
+  animation: textGlow 3s ease-in-out infinite;
+}
+
+/* ===== GRADIENT ANIMATION ===== */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-animated {
+  background-size: 200% 200%;
+  animation: gradientShift 6s ease infinite;
+}
+
+/* ===== HAMBURGER ANIMATION ===== */
+@keyframes hamburgerTop {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(8px) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes hamburgerBottom {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-8px) rotate(-45deg);
+    opacity: 1;
+  }
+}
+
+@keyframes hamburgerMiddle {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.hamburger.active .hamburger-top {
+  animation: hamburgerTop 0.3s ease-out forwards;
+}
+
+.hamburger.active .hamburger-middle {
+  animation: hamburgerMiddle 0.3s ease-out forwards;
+}
+
+.hamburger.active .hamburger-bottom {
+  animation: hamburgerBottom 0.3s ease-out forwards;
+}
+
+/* ===== LOADING SPINNER ===== */
+@keyframes spin-fast {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin-fast 1s linear infinite;
+}

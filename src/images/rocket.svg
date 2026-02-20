@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="width:100%;">
+  <defs>
+    <style>
+      /*
+        Cycle total : 5s infini
+        0%  → 20% (0s→1s)   : cog tourne visible
+        20% → 32% (1s→1.6s) : cog disparaît
+        32% → 40% (1.6s→2s) : fusée apparaît
+        40% → 64% (2s→3.2s) : fusée tient + flammes
+        64% → 84% (3.2s→4.2s): décollage
+        84% →100% (4.2s→5s) : pause noire → repart
+      */
+
+      /* ===== COG ===== */
+      .cog-group {
+        transform-origin: 100px 95px;
+        animation: cogCycle 5s linear infinite;
+      }
+      @keyframes cogCycle {
+        0%   { opacity:1; transform: rotate(0deg) scale(1); }
+        20%  { opacity:1; transform: rotate(480deg) scale(1); }
+        32%  { opacity:0; transform: rotate(570deg) scale(0); }
+        100% { opacity:0; transform: rotate(570deg) scale(0); }
+      }
+
+      /* ===== FUSÉE ===== */
+      .rocket-group {
+        transform-origin: 100px 124px;
+        animation: rocketCycle 5s linear infinite;
+      }
+      @keyframes rocketCycle {
+        0%   { opacity:0; transform: translateY(0) scale(0.2); }
+        32%  { opacity:0; transform: translateY(0) scale(0.2); }
+        40%  { opacity:1; transform: translateY(0) scale(1); }
+        64%  { opacity:1; transform: translateY(0) scale(1); }
+        68%  { opacity:1; transform: translateY(8px) scale(0.95); }
+        84%  { opacity:0; transform: translateY(-230px) scale(0.6); }
+        100% { opacity:0; transform: translateY(-230px) scale(0.6); }
+      }
+
+      /* ===== FLAMMES ===== */
+      .flame-group {
+        transform-origin: 100px 150px;
+        animation: flameCycle 5s linear infinite;
+      }
+      @keyframes flameCycle {
+        0%   { opacity:0; transform: scaleY(1); }
+        40%  { opacity:0; transform: scaleY(1); }
+        44%  { opacity:1; transform: scaleY(1); }
+        50%  { opacity:1; transform: scaleY(1.35) scaleX(0.8); }
+        56%  { opacity:1; transform: scaleY(1); }
+        62%  { opacity:1; transform: scaleY(1.3) scaleX(0.85); }
+        68%  { opacity:1; transform: scaleY(1.5) scaleX(0.75); }
+        80%  { opacity:0.5; transform: scaleY(2) scaleX(0.6); }
+        84%  { opacity:0; transform: scaleY(2); }
+        100% { opacity:0; transform: scaleY(1); }
+      }
+
+      /* ===== FUMÉE ===== */
+      .smoke {
+        transform-origin: 100px 162px;
+        animation: smokeCycle 5s linear infinite;
+      }
+      @keyframes smokeCycle {
+        0%   { opacity:0; transform: translateY(0) scale(0.5); }
+        64%  { opacity:0; transform: translateY(0) scale(0.5); }
+        68%  { opacity:0.8; transform: translateY(0) scale(1); }
+        84%  { opacity:0;   transform: translateY(35px) scale(2); }
+        100% { opacity:0;   transform: translateY(35px) scale(2); }
+      }
+
+      /* ===== ÉTOILES ===== */
+      .star { animation: starCycle 5s linear infinite; }
+      .s1 { animation-delay:  0s; }
+      .s2 { animation-delay: -0.15s; }
+      .s3 { animation-delay: -0.3s; }
+      .s4 { animation-delay: -0.08s; }
+      .s5 { animation-delay: -0.22s; }
+      @keyframes starCycle {
+        0%,39% { opacity:0; }
+        50%    { opacity:1; }
+        83%    { opacity:0.8; }
+        84%,100%{ opacity:0; }
+      }
+    </style>
+
+    <linearGradient id="rocketGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#e0e7ff"/>
+      <stop offset="50%"  stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fbbf24"/>
+      <stop offset="50%"  stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0.1"/>
+    </linearGradient>
+    <radialGradient id="glowBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#312e81" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0f0c29"/>
+    </radialGradient>
+  </defs>
+
+
+  <!-- Étoiles -->
+  <circle class="star s1" cx="30"  cy="40"  r="1.8" fill="white"/>
+  <circle class="star s2" cx="162" cy="28"  r="1.5" fill="white"/>
+  <circle class="star s3" cx="172" cy="152" r="1.8" fill="white"/>
+  <circle class="star s4" cx="22"  cy="118" r="1.2" fill="white"/>
+  <circle class="star s5" cx="178" cy="88"  r="1.5" fill="white"/>
+
+  <!-- ===== COG ===== -->
+  <g class="cog-group">
+    <path d="
+      M100,52 L108,56 L112,48 L120,50 L120,58 L128,62 L134,56 L140,62
+      L136,70 L140,78 L148,78 L148,86 L140,90 L140,98 L148,102 L148,110
+      L140,110 L136,118 L140,126 L134,132 L128,128 L120,132 L120,140
+      L112,142 L108,134 L100,138 L92,134 L88,142 L80,140 L80,132
+      L72,128 L66,132 L60,126 L64,118 L60,110 L52,110 L52,102 L60,98
+      L60,90 L52,86 L52,78 L60,78 L64,70 L60,62 L66,56 L72,60
+      L80,56 L80,48 L88,46 Z
+    " fill="#6366f1" opacity="0.9"/>
+    <circle cx="100" cy="95" r="22" fill="#4f46e5"/>
+    <circle cx="100" cy="95" r="10" fill="#312e81"/>
+    <line x1="100" y1="73"  x2="100" y2="117" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="81"  y1="84"  x2="119" y2="106" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+    <line x1="81"  y1="106" x2="119" y2="84"  stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- ===== FUSÉE ===== -->
+  <g class="rocket-group">
+    <!-- Ailerons -->
+    <polygon points="82,150 88,128 88,150" fill="#6366f1"/>
+    <polygon points="118,150 112,128 112,150" fill="#6366f1"/>
+    <!-- Corps -->
+    <rect x="88" y="100" width="24" height="52" rx="4" fill="url(#rocketGrad)"/>
+    <!-- Nez -->
+    <path d="M88,100 Q100,58 112,100 Z" fill="url(#rocketGrad)"/>
+    <!-- Hublot -->
+    <circle cx="100" cy="114" r="7"   fill="#312e81" stroke="#818cf8" stroke-width="1.5"/>
+    <circle cx="100" cy="114" r="4"   fill="#6366f1" opacity="0.6"/>
+    <circle cx="98"  cy="112" r="1.5" fill="white"   opacity="0.7"/>
+    <!-- Flammes -->
+    <g class="flame-group">
+      <ellipse cx="100" cy="157" rx="10" ry="14" fill="url(#flameGrad)"/>
+      <ellipse cx="100" cy="160" rx="5"  ry="8"  fill="#fef3c7" opacity="0.9"/>
+    </g>
+    <!-- Fumée -->
+    <ellipse class="smoke" cx="100" cy="162" rx="10" ry="5" fill="#9ca3af" opacity="0"/>
+  </g>
+
+</svg>

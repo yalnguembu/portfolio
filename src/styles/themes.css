@@ -1,0 +1,40 @@
+/* Theme Overrides - Dark Mode */
+
+[data-theme="dark"] {
+  --color-bg: var(--_blue-night);
+  --color-surface: var(--_blue-deep);
+  --color-surface-secondary: #0f172a;
+  --color-text: var(--_blue-lightest);
+  --color-text-secondary: var(--_blue-lighter);
+  --color-text-tertiary: var(--_blue-light);
+  --color-border: var(--_blue-surface);
+  --color-divider: #1e293b;
+  --color-primary: var(--_yellow);
+  --color-primary-hover: #f59e0b;
+  --color-accent: var(--_green-light);
+  --color-accent-light: var(--_green);
+}
+
+/* Smooth theme transitions */
+body {
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+[data-theme] * {
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base);
+}
+
+/* Skip animations during theme switch for performance */
+html.theme-switching {
+  pointer-events: none;
+}
+
+html.theme-switching * {
+  animation: none !important;
+  transition: none !important;
+}

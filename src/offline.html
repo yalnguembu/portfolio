@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="You are offline - Yal Nguembu" />
+    <meta name="theme-color" content="#fbbf24" />
+
+    <title>Offline - Yal Nguembu</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <style>
+      html {
+        color-scheme: light dark;
+      }
+    </style>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: var(--space-lg);
+      "
+    >
+      <div style="text-align: center; max-width: 500px">
+        <div
+          style="font-size: 4rem; margin-bottom: var(--space-lg)"
+          class="pulse"
+        >
+          ☁️
+        </div>
+        <h1
+          class="mb-lg"
+          data-fr="Vous êtes actuellement hors ligne"
+          data-en="You're Currently Offline"
+        >
+          You're Currently Offline
+        </h1>
+        <p
+          class="mb-2xl"
+          style="color: var(--color-text-secondary)"
+          data-fr="Vérifiez votre connexion Internet et réessayez."
+          data-en="Check your internet connection and try again."
+        >
+          Check your internet connection and try again.
+        </p>
+        <a
+          href="/"
+          class="btn btn-primary"
+          data-fr="Retour à l'accueil"
+          data-en="Back Home"
+          >Back Home</a
+        >
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/main.ts"></script>
+  </body>
+</html>

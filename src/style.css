@@ -1,0 +1,13 @@
+/* Main CSS Entry Point - Import all stylesheets */
+
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+
+/* CSS System */
+@import "./styles/reset.css";
+@import "./styles/variables.css";
+@import "./styles/themes.css";
+@import "./styles/global.css";
+@import "./styles/components.css";
+@import "./styles/animations.css";
+@import "./styles/responsive.css";
+@import "./styles/accessibility.css";

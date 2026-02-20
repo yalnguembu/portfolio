@@ -1,0 +1,189 @@
+/* Accessibility Styles */
+
+/* ===== SKIP LINK ===== */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: -100;
+  background: var(--color-primary);
+  color: var(--_black);
+  padding: var(--space-sm) var(--space-md);
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  visibility: hidden;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ===== FOCUS INDICATORS ===== */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button:focus-visible {
+  outline-offset: -3px;
+}
+
+a:focus-visible {
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+/* ===== SCREEN READER ONLY ===== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ===== ARIA LABELS ===== */
+[aria-label],
+[aria-labelledby] {
+  /* Ensures elements with aria labels are properly styled */
+}
+
+/* ===== CONTRAST & READABILITY ===== */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  /* Ensures minimum 1.5:1 line height for readability */
+  line-height: 1.5;
+}
+
+p {
+  line-height: 1.75;
+}
+
+/* ===== KEYBOARD NAVIGATION ===== */
+:focus-within {
+  outline-offset: 2px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== HIGH CONTRAST MODE ===== */
+@media (prefers-contrast: more) {
+  body {
+    border: 1px solid var(--color-text);
+  }
+
+  button,
+  a {
+    text-decoration: underline;
+  }
+}
+
+/* ===== DYSLEXIA-FRIENDLY FONT FALLBACK ===== */
+@supports (font-family: "OpenDyslexic") {
+  @media (prefers-dyslexia: true) {
+    body {
+      font-family: "OpenDyslexic", var(--font-family-body);
+    }
+  }
+}
+
+/* ===== LARGE TEXT MODE ===== */
+@media (prefers-color-scheme: dark) and (max-height: 600px) {
+  html {
+    font-size: 1.125rem;
+  }
+}
+
+/* ===== ARIA PRESSED STATE ===== */
+[aria-pressed="true"] {
+  background-color: var(--color-primary);
+  color: var(--_black);
+}
+
+/* ===== ARIA EXPANDED STATE ===== */
+[aria-expanded="true"] {
+  /* Visual indicator for expanded state */
+}
+
+/* ===== ARIA CURRENT PAGE ===== */
+[aria-current="page"] {
+  font-weight: var(--font-weight-bold);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+/* ===== INVALID INPUT ===== */
+input:invalid,
+textarea:invalid {
+  border-color: #dc2626;
+  background-color: rgba(220, 38, 38, 0.05);
+}
+
+input:invalid:focus-visible {
+  outline-color: #dc2626;
+}
+
+/* ===== TOOLTIP ACCESSIBILITY ===== */
+[role="tooltip"] {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  z-index: 1000;
+}
+
+/* ===== DIALOG/MODAL ACCESSIBILITY ===== */
+[role="dialog"] {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+/* ===== LANDMARK REGIONS ===== */
+main {
+  /* Ensures main content is clearly defined */
+}
+
+nav,
+[role="navigation"] {
+  /* Navigation region clearly marked */
+}
+
+[role="contentinfo"] {
+  /* Footer/contentinfo region */
+  border-top: 1px solid var(--color-divider);
+}
+
+/* ===== LINK FOCUS TRAP ===== */
+a:focus-visible::after {
+  content: " (link)";
+  font-size: 0.75em;
+}
+
+@media (max-width: 768px) {
+  a:focus-visible::after {
+    content: "";
+  }
+}

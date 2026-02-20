@@ -1,0 +1,12 @@
+# robots.txt — nguembu.cloud
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Disallow build artifacts & internal files
+Disallow: /js/
+Disallow: /css/
+Disallow: /assets/
+
+Sitemap: https://nguembu.cloud/sitemap.xml
