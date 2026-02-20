@@ -31,8 +31,12 @@ class RevealAnimations {
       });
     }, options);
 
-    document.querySelectorAll(".reveal").forEach((el) => {
-      this.observer!.observe(el);
+    requestAnimationFrame(() => {
+      document
+        .querySelectorAll(".reveal, .slide-in-left, .slide-in-right, .fade-in")
+        .forEach((el) => {
+          this.observer!.observe(el);
+        });
     });
   }
 }

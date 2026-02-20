@@ -85,9 +85,9 @@ class ThemeManager {
       const currentTheme = this.getStoredTheme();
       const icon = themeToggle.querySelector<HTMLElement>("svg") ?? themeToggle;
 
-      icon.classList.add("scale-up");
+      icon.classList.add("scale-up", "visible");
       setTimeout(() => {
-        icon.classList.remove("scale-up");
+        icon.classList.remove("scale-up", "visible");
       }, 400);
 
       themeToggle.setAttribute("aria-label", `Current theme: ${currentTheme}`);

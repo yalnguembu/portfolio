@@ -13,26 +13,44 @@
 }
 
 .reveal {
-  animation: reveal 0.6s ease-out forwards;
   opacity: 0;
 }
 
 .reveal.visible {
-  opacity: 1;
   animation: reveal 0.6s ease-out forwards;
 }
 
 /* Stagger animation delays */
-.reveal:nth-child(1) { animation-delay: 0ms; }
-.reveal:nth-child(2) { animation-delay: 100ms; }
-.reveal:nth-child(3) { animation-delay: 200ms; }
-.reveal:nth-child(4) { animation-delay: 300ms; }
-.reveal:nth-child(5) { animation-delay: 400ms; }
-.reveal:nth-child(6) { animation-delay: 500ms; }
-.reveal:nth-child(7) { animation-delay: 600ms; }
-.reveal:nth-child(8) { animation-delay: 700ms; }
-.reveal:nth-child(9) { animation-delay: 800ms; }
-.reveal:nth-child(10) { animation-delay: 900ms; }
+.reveal:nth-child(1) {
+  animation-delay: 0ms;
+}
+.reveal:nth-child(2) {
+  animation-delay: 100ms;
+}
+.reveal:nth-child(3) {
+  animation-delay: 200ms;
+}
+.reveal:nth-child(4) {
+  animation-delay: 300ms;
+}
+.reveal:nth-child(5) {
+  animation-delay: 400ms;
+}
+.reveal:nth-child(6) {
+  animation-delay: 500ms;
+}
+.reveal:nth-child(7) {
+  animation-delay: 600ms;
+}
+.reveal:nth-child(8) {
+  animation-delay: 700ms;
+}
+.reveal:nth-child(9) {
+  animation-delay: 800ms;
+}
+.reveal:nth-child(10) {
+  animation-delay: 900ms;
+}
 
 /* ===== FADE IN ===== */
 @keyframes fadeIn {
@@ -45,7 +63,11 @@
 }
 
 .fade-in {
-  animation: fadeIn 0.6s ease-out;
+  opacity: 0;
+}
+
+.fade-in.visible {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
 /* ===== SCALE UP ===== */
@@ -61,7 +83,11 @@
 }
 
 .scale-up {
-  animation: scaleUp 0.4s ease-out;
+  opacity: 0;
+}
+
+.scale-up.visible {
+  animation: scaleUp 0.4s ease-out forwards;
 }
 
 /* ===== SLIDE IN ===== */
@@ -88,16 +114,25 @@
 }
 
 .slide-in-left {
-  animation: slideInLeft 0.6s ease-out;
+  opacity: 0;
+}
+
+.slide-in-left.visible {
+  animation: slideInLeft 0.6s ease-out forwards;
 }
 
 .slide-in-right {
-  animation: slideInRight 0.6s ease-out;
+  opacity: 0;
+}
+
+.slide-in-right.visible {
+  animation: slideInRight 0.6s ease-out forwards;
 }
 
 /* ===== PULSE ===== */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -125,7 +160,8 @@
 
 /* ===== BOUNCE ===== */
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -154,7 +190,8 @@
 }
 
 @keyframes iconPulse {
-  0%, 100% {
+  0%,
+  100% {
     r: 40px;
     opacity: 1;
   }
@@ -169,7 +206,8 @@
 }
 
 @keyframes iconFloat {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -208,7 +246,8 @@
 
 /* ===== TEXT ANIMATIONS ===== */
 @keyframes textGlow {
-  0%, 100% {
+  0%,
+  100% {
     text-shadow: 0 0 10px rgba(251, 191, 36, 0);
   }
   50% {
