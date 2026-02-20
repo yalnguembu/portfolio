@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Service temporarily unavailable — Yal Nguembu"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#fbbf24" />
+    <!-- Retry-After hint for browsers/crawlers -->
+    <meta http-equiv="refresh" content="30" />
+
+    <title>503 — Service Unavailable · Yal Nguembu</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+
+    <style>
+      html {
+        color-scheme: light dark;
+      }
+    </style>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: var(--space-lg);
+      "
+    >
+      <div style="text-align: center; max-width: 560px">
+        <!-- Error code -->
+        <div
+          style="
+            font-family: var(--font-family-display);
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: var(--font-weight-bold);
+            line-height: 1;
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-md);
+            user-select: none;
+          "
+        >
+          503
+        </div>
+
+        <!-- Divider -->
+        <div
+          style="
+            width: 60px;
+            height: 3px;
+            background: #f97316;
+            border-radius: 99px;
+            margin: 0 auto var(--space-xl);
+          "
+        ></div>
+
+        <h1
+          class="mb-md"
+          data-fr="Service temporairement indisponible"
+          data-en="Service Unavailable"
+        >
+          Service Unavailable
+        </h1>
+
+        <p
+          class="mb-2xl"
+          style="color: var(--color-text-secondary)"
+          data-fr="Le site est temporairement en maintenance. Merci de réessayer dans quelques instants."
+          data-en="The site is temporarily down for maintenance. Please try again in a few moments."
+        >
+          The site is temporarily down for maintenance. Please try again in a
+          few moments.
+        </p>
+
+        <!-- Countdown hint -->
+        <p
+          style="
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-xs);
+            background: var(--color-surface-secondary);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-xs) var(--space-md);
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-2xl);
+          "
+        >
+          <span
+            style="
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: #f97316;
+              display: inline-block;
+            "
+            class="pulse"
+          ></span>
+          <span
+            data-fr="Rafraîchissement automatique dans 30s"
+            data-en="Auto-refreshing in 30s"
+            >Auto-refreshing in 30s</span
+          >
+        </p>
+
+        <div
+          class="flex gap-md"
+          style="justify-content: center; flex-wrap: wrap"
+        >
+          <button
+            onclick="window.location.reload()"
+            class="btn btn-primary"
+            data-fr="Réessayer maintenant"
+            data-en="Retry Now"
+          >
+            Retry Now
+          </button>
+          <a
+            href="/"
+            class="btn btn-secondary"
+            data-fr="Retour à l'accueil"
+            data-en="Back Home"
+            >Back Home</a
+          >
+        </div>
+
+        <p
+          style="
+            margin-top: var(--space-2xl);
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+          "
+        >
+          <span data-fr="Questions ? " data-en="Questions? ">Questions? </span>
+          <a
+            href="mailto:contact@nguembu.cloud"
+            style="color: var(--color-primary)"
+            >contact@nguembu.cloud</a
+          >
+        </p>
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/main.ts"></script>
+  </body>
+</html>

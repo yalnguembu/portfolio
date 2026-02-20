@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Internal server error — Yal Nguembu" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#fbbf24" />
+
+    <title>500 — Server Error · Yal Nguembu</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+
+    <style>
+      html {
+        color-scheme: light dark;
+      }
+    </style>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: var(--space-lg);
+      "
+    >
+      <div style="text-align: center; max-width: 560px">
+        <!-- Error code -->
+        <div
+          style="
+            font-family: var(--font-family-display);
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: var(--font-weight-bold);
+            line-height: 1;
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-md);
+            user-select: none;
+          "
+        >
+          500
+        </div>
+
+        <!-- Divider -->
+        <div
+          style="
+            width: 60px;
+            height: 3px;
+            background: #ef4444;
+            border-radius: 99px;
+            margin: 0 auto var(--space-xl);
+          "
+        ></div>
+
+        <h1
+          class="mb-md"
+          data-fr="Erreur interne du serveur"
+          data-en="Internal Server Error"
+        >
+          Internal Server Error
+        </h1>
+
+        <p
+          class="mb-2xl"
+          style="color: var(--color-text-secondary)"
+          data-fr="Quelque chose s'est mal passé de notre côté. Nous travaillons à résoudre le problème."
+          data-en="Something went wrong on our end. We're working on fixing it."
+        >
+          Something went wrong on our end. We're working on fixing it.
+        </p>
+
+        <div
+          class="flex gap-md"
+          style="justify-content: center; flex-wrap: wrap"
+        >
+          <a
+            href="/"
+            class="btn btn-primary"
+            data-fr="Retour à l'accueil"
+            data-en="Back Home"
+            >Back Home</a
+          >
+          <button
+            onclick="window.location.reload()"
+            class="btn btn-secondary"
+            data-fr="Réessayer"
+            data-en="Try Again"
+          >
+            Try Again
+          </button>
+        </div>
+
+        <!-- Error info -->
+        <p
+          style="
+            margin-top: var(--space-2xl);
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+          "
+        >
+          <span
+            data-fr="Si le problème persiste : "
+            data-en="If the issue persists: "
+            >If the issue persists:
+          </span>
+          <a
+            href="mailto:contact@nguembu.cloud"
+            style="color: var(--color-primary)"
+            >contact@nguembu.cloud</a
+          >
+        </p>
+      </div>
+    </main>
+
+    <script type="module" src="/scripts/main.ts"></script>
+  </body>
+</html>
